@@ -1,0 +1,21 @@
+\chapter{Quellcode Darstellung}
+Selbstverständlich stellt \LaTeX{} Methoden zur Verfügung um den eigenen Quellcode uninterpretiert darzustellen. Hierbei erfolgt keinerlei Formatierung und der Text wird in einer \texttt{TypeWriter}-Schrift dargestellt.
+\begin{lstlisting}[caption={Verbatim (Befehle)}]
+
+%Befehle werden nicht interpretiert
+\begin{verbatim}
+	Quellcode
+\end{verbatim}
+
+%Leerzeichen werden ersetzt
+\begin{verbatim*}
+	Quellcode
+\end{verbatim*}
+
+%Inline Darstellung, beliebige Zeichen zur Klammerung
+\verb=Qellcode=
+
+%Leerzeichen werden ersetzt
+\verb*+Qellcode+
+
+\end{lstlisting}

@@ -1,0 +1,18 @@
+\chapter{Eigene Befehle}
+Um den Arbeitsablauf beim Schreiben zu vereinfachen gibt es in \LaTeX die Möglichkeit eigene Kommandos zu definieren. So können z.B. oft zu tippende lange Befehle abgekürzt oder die Einheitlichkeit der Textelemente gesichert werden. Neben einfachen Befehlen ist es auch möglich Parameter (bis zu 9) zu übergeben.
+\begin{lstlisting}[caption={Befehl mit Parametern}, escapechar=$]
+%Befehl
+\newcommand{\NAME}[ANZAHL][OPTIONAL]{DEFINITION}
+
+%Befehl zum Ueberschreiben vorhandener Befehle
+\renewcommand{\NAME}[ANZAHL][OPTIONAL]{DEFINITION}
+
+%Beispielbefehl Definition
+\newcommand{\format}[2][blue]{\textcolor{#1}{\textbf{#2}}}
+
+%Beispielbefehl
+\format{Dies} und \format[greed]{Das}
+
+%Beispiel
+$\format{Dies} und \format[green]{Das}$
+\end{lstlisting}

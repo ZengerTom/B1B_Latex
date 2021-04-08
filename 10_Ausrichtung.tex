@@ -1,0 +1,15 @@
+\chapter{Ausrichtung}
+\LaTeX{} setzt den Text automatisch in Blocksatz. Dies führt dazu, dass der rechte und der linke Rand bündig sind. Die Ausrichtung kann allerdings mit entsprechenden Befehlen manipuliert werden.
+
+
+\section{Zentrieren}
+Zum Zentrieren von Text stehen der Befehl \verb=\centering= (für \textit{floating}-Umgebungen geeignet) oder die Umgebung \verb=center= (fügt zusätzlichen vertikalen Abstand ein) zur Verfügung. Der \TeX-Befehl \verb=\centerline= sollte in \LaTeX{} vermieden werden, da er z.B. inkompatibel mit dem \textsl{color}-Paket ist und zu unerwarteten Effekten führen kann.
+
+
+\section{Flatterrand}
+
+\paragraph{Linksbündiger Rand}\leavevmode\\
+Einen rechten Flatterrand kann mit mit Hilfe der \verb=flushleft=-Umgebung erstellen. Soll nur eine einzelne Zeile linksbündig gesetzt werden, kann der Befehl \verb=\raggedright= genutzt werden.
+
+\paragraph{Rechtsbündiger Rand}\leavevmode\\
+Einen linken Flatterrand kann mit mit Hilfe der \verb=flushright=-Umgebung erstellen. Soll nur eine einzelne Zeile linksbündig gesetzt werden, kann der Befehl \verb=\raggedleft= genutzt werden.

@@ -1,0 +1,69 @@
+\chapter{Listen}
+In \LaTeX{} gibt es mehrere Möglichkeiten unterschiedliche Listen zu realisieren. Hierzu gibt es verschiedene Umgebungen.
+
+\section{einfache Listen}
+Mit der Umgebung \verb=itemize= können einfache Listen erzeugt werden. Eine Verschachtelung ist möglich.
+
+\begin{lstlisting}[caption={\texttt{itemize}-Liste}]
+\begin{itemize}
+	\item
+	\item
+\end{itemize}
+\end{lstlisting}
+
+\section{Numerierte Listen}
+Mit der Umgebung \verb=enumerate= können nummerierte Aufzählungen erzeugt werden. Eine Verschachtelung ist möglich.
+
+\begin{lstlisting}[caption={\texttt{enumerate}-Liste}]
+\begin{enumerate}
+	\item
+	\item
+\end{enumerate}
+\end{lstlisting}
+\newpage
+\section{Beschreibung}
+Die Umgebung \verb=description= eignet sich für Beschreibungen.
+
+\begin{lstlisting}[caption={\texttt{itemize}-Liste}]
+\begin{description}
+	\item [text:] beschreibung
+	\item [text:] beschreibung
+\end{description}
+\end{lstlisting}
+
+\begin{figure}[H]
+\begin{multicols}{3}
+\textbf{einfache Liste}
+\begin{itemize}
+	\item Punkt1
+	\item Punkt2
+	\item  Punkt3
+		\begin{itemize}
+		\item Punkt3.1
+	  	\item Punkt3.2
+		\end{itemize}
+	\item Punkt4
+\end{itemize}
+\columnbreak
+\textbf{nummerierte Liste}
+\begin{enumerate}
+	\item Punkt1
+	\item Punkt2
+	\item  Punkt3
+		\begin{enumerate}
+		\item Punkt3.1
+	  	\item Punkt3.2
+		\end{enumerate}
+	\item Punkt4
+\end{enumerate}
+\columnbreak
+\textbf{Beschreibung}
+\begin{description}
+	\item [C:]		Beschreibung
+	\item [JAVA:]	Beschreibung
+	\item [PHP:]	Beschreibung
+	\item [HTML:]	Beschreibung
+\end{description}
+\end{multicols}
+\caption{Listen Beispiele}
+\end{figure}

@@ -1,0 +1,18 @@
+\chapter{Allgemeines}
+\section{Präambel}
+Den Teil zwischen der Festlegung der Dokumentenklasse und dem Beginn des Dokuments nennt man Präambel. In der Präambel werden Pakete geladen und eigene Befehle definiert.
+\section{Befehle}
+Grundsätzlich beginnen \LaTeX-Befehle mit einem Backslash (\textbackslash{}) gefolgt vom eigentlich Namen des Befehls. Beendet wird der Befehl durch ein Leerzeichen oder Sonderzeichen. Einigen Befehlen können Parametern übergeben werden. Verpflichtende Parameter werden üblicherweise in geschweiften Klammern übergeben (\verb=\befehlsname{parameter}=). Manche Befehle erwarten die Paramterangabe in eckigen Klammern. Diese Parameter sind optional. Sollten Befehle im Fließtext verwendet werden, kann mit abschließenden geschweiften Klammern ein Leerzeichen erzeugt werden.
+\section{Umgebung}
+Ein zentrales Element in \LaTeX sind Umgebungen (engl. Environment). Mit Umgebungen lassen sich Effekte auf einen bestimmten Textbereich begrenzen oder spezielle Elemente umschließen.
+\begin{lstlisting}[caption={Umgebung}]
+\begin{umgebungsname}
+Inhalt
+\end{umgebungsname}
+\end{lstlisting}
+\section{Key-Value-Interface}
+Mit dem Graphics Bundle von David Carlisle wurde des \textsl{keyval}-Package eingeführt.Dieses Interface regelt die Strukturierung von Parametern. Jeder Parameter besteht aus einem Key und einem zugehörigem Wert (Value). Viele Pakete benutzen dieses Interface und ermöglichen damit die Übergabe von "'key=value"'--Paaren.
+\section{Kommentare}
+\LaTeX kennt als Standard nur den einzeiligen Kommentar. Dieser wird mit dem Prozentzeichen (\%) eingeleitet. Mehrzeilige Kommentare können in \LaTeX mit mehreren einzeiligen Kommentaren realisiert werden.
+\section{Leerzeichen}
+\LaTeX behandelt mehrere Leerzeichen wie ein Leerzeichen. Sollte dies nicht gewünscht sein, muss mit entsprechenden \LaTeX-Befehlen nachgeholfen werden. Mehrere Leerzeilen werden ebenfalls nach obigen Prinzip behandelt.

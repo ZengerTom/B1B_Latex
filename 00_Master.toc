@@ -1,0 +1,90 @@
+\babel@toc {ngerman}{}
+\contentsline {chapter}{\numberline {1}Vorwort}{8}{chapter.1}%
+\contentsline {section}{\numberline {1.1}\texttt {B1B} - Was ist das?}{8}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Motivation}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Literatur und Grundlagen}{8}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Allgemeines}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Präambel}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Befehle}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Umgebung}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Key-Value-Interface}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Kommentare}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Leerzeichen}{10}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Dokumentenaufbau}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}minimaler Dokumentenaufbau}{11}{section.3.1}%
+\contentsline {paragraph}{\nonumberline \textcolor {blue}{\textbackslash documentclass}}{11}{section*.5}%
+\contentsline {paragraph}{\nonumberline \textcolor {blue}{\textbackslash begin}\{document\}}{11}{section*.6}%
+\contentsline {paragraph}{\nonumberline \textcolor {blue}{\textbackslash end}\{document\}}{11}{section*.7}%
+\contentsline {section}{\numberline {3.2}Deklaration Dokumentenklasse}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Standard-Dokumentenklassen}{11}{section.3.3}%
+\contentsline {paragraph}{\nonumberline Klassen}{11}{section*.8}%
+\contentsline {section}{\numberline {3.4}Gliederungsebenen}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Optionen der Standardklassen}{12}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Pakete}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Laden der Pakete}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Wichtige Pakete}{13}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}\texttt {babel}}{13}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}\texttt {color}}{13}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}\texttt {graphicx}}{14}{subsection.4.2.3}%
+\contentsline {paragraph}{\nonumberline Rotieren}{14}{section*.10}%
+\contentsline {paragraph}{\nonumberline Skalieren}{14}{section*.11}%
+\contentsline {paragraph}{\nonumberline Grafik einbinden}{14}{section*.12}%
+\contentsline {subsection}{\numberline {4.2.4}\texttt {inputenc}}{15}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}\texttt {listings}}{15}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}\texttt {longtable}}{15}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}\texttt {multicol}}{16}{subsection.4.2.7}%
+\contentsline {chapter}{\numberline {5}Titelseite}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Dokumentenunterteilung}{18}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Kapitel}{18}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Inhaltsverzeichnis}{18}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Unterteilung in mehrere Dateien}{19}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Schrift}{20}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Schriftfamilie}{20}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Schriftgröße}{20}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Schriftstil \& Hervorhebung}{21}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Umbruch}{22}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Blocksatz}{22}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Trennungshilfen}{22}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Zeilenumbruch \& Absatz}{22}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Seitenumbruch}{23}{section.8.4}%
+\contentsline {paragraph}{\nonumberline Automatische Steuerung}{23}{section*.18}%
+\contentsline {paragraph}{\nonumberline Manuelle Steuerung}{24}{section*.20}%
+\contentsline {chapter}{\numberline {9}Abstand}{25}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Ausrichtung}{26}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Zentrieren}{26}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Flatterrand}{26}{section.10.2}%
+\contentsline {paragraph}{\nonumberline Linksbündiger Rand}{26}{section*.22}%
+\contentsline {paragraph}{\nonumberline Rechtsbündiger Rand}{26}{section*.23}%
+\contentsline {chapter}{\numberline {11}Zitate}{27}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Verweise und Bemerkungen}{28}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Fußnoten}{28}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Randbemerkung}{28}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Marken}{28}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Querverweise}{29}{section.12.4}%
+\contentsline {chapter}{\numberline {13}Listen}{30}{chapter.13}%
+\contentsline {section}{\numberline {13.1}einfache Listen}{30}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Numerierte Listen}{30}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Beschreibung}{31}{section.13.3}%
+\contentsline {chapter}{\numberline {14}Tabellen}{32}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Tabulator - \texttt {tabbing}}{32}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Tabellen - \texttt {tabular}}{32}{section.14.2}%
+\contentsline {chapter}{\numberline {15}Quellcode Darstellung}{34}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Boxen}{35}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Konzept}{35}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Arten}{35}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Rahmen}{36}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Parbox}{36}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Linien \& Balken}{37}{section.16.5}%
+\contentsline {section}{\numberline {16.6}Verschieben von Boxen}{37}{section.16.6}%
+\contentsline {chapter}{\numberline {17}Gleitobjekte}{38}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Abbildungen}{38}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Tabellen}{38}{section.17.2}%
+\contentsline {section}{\numberline {17.3}\texttt {minipage}}{39}{section.17.3}%
+\contentsline {chapter}{\numberline {18}Eigene Befehle}{40}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Verzeichnisse}{41}{chapter.19}%
+\contentsline {subsection}{\numberline {19.0.1}Anhang}{41}{subsection.19.0.1}%
+\contentsline {chapter}{\numberline {20}Steuerzeichen \& Sonderzeichen}{42}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Griechische Buchstaben}{42}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Interpunktions-, Satzzeichen und Klammern}{44}{section.20.2}%
+\contentsline {section}{\numberline {20.3}Sonderzeichnen \& Symbole}{45}{section.20.3}%
+\contentsline {chapter}{\numberline {21}Changelog}{46}{chapter.21}%

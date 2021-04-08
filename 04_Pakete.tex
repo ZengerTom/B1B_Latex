@@ -1,0 +1,134 @@
+\chapter{Pakete}
+\section{Laden der Pakete}
+\verb=\usepackage[<optionen>]{<paket>}=\\
+Mit dem \verb=usepackage=-Befehl können Pakete zur Verwendung geladen werden. Pakete stellen zusätzliche Funktionalität bereit. Es können auch mehrere Pakete gleichzeitig geladen werden. Allerdings ist hierbei eine Parameterübergabe nicht mehr möglich bzw. gelten die übergebenen Parameter für alle Pakete.
+\section{Wichtige Pakete}
+\subsection{\texttt{babel}}
+\verb=\usepackage[<optionen>]{babel}=\\
+\\
+\textsl{Babel} ist ein Sprachpaket für \LaTeX . Es gibt an in welchen Sprachen ein Dokument geschrieben ist. Damit andere Pakete auch Zugriff auf die Funktionalität von \textsl{Babel} haben ist es ratsam die Sprachen als \textsl{globale Optionen}. Wird mehr als eine Sprache angegeben, kann mit der \textsl{main}-Option die Hauptsprache explizit gesetzt werden. Mit dem Makro \verb=\selectlanguage{<sprache>}= können zwischen den Sprachen gewechselt werden. Ebenfalls kann dies mittels einer Umgebung geschehen. Mehr hierzu in der Dokumentation von \textsl{Babel}\footnote{http://ftp.uni-erlangen.de/ctan/macros/latex/required/babel/base/babel.pdf}.
+\begin{lstlisting}[caption={Babel, globale Optionen}]
+\documentclass[ngerman]{book}
+\usepackage{babel}
+\end{lstlisting}
+\subsection{\texttt{color}}
+\verb=\usepackage{color}=\\
+Das Paket \textsl{Color} erlaubt es Farben im Dokument zu benutzen. Es existieren bereits vordefinierte Farbwerte wie \verb=black, white, red, green, blue, cyan, magenta, yellow=. Sollten andere Farbwerte gewünscht werden, müssen diese zuerst definiert werden. Mehr hierzu in der Dokumentation von \textsl{Babel}\footnote{http://vesta.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/required/graphics/grfguide.pdf}.
+\begin{lstlisting}[caption={Color, Farbdefinition}]
+\definecolor{<name>}{<model>}{<spezifikation>}
+%Beispiel
+\definecolor{light-blue}{rgb}{0.8,0.85,1}
+\end{lstlisting}
+Um Text farblich hervorzuheben gibt es folgende Möglichkeiten:
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\textbf{Befehl}							\>\textbf{Erklärung}\\
+\verb=\color{<name>}=					\>Färbt Text bis zum Ende der Umgebung\\
+\verb=\textcolor{<name>}{<text>}=			\>Färbt angegebenen Text\\
+\verb=\pagecolor=						\>Setzt Hintergrundf. für alle folg. Seiten\\
+\verb=\nopagecolor=						\>Setzt weiße Hintergrundfarbe\\
+\verb=\colorbox{<name>}{<text>}=			\>Setzt farbige Box um Text\\
+\verb=\fcolorbox{<name2>}{<name1>}{<text>}=	\>Setzt farbige Box mit Rahmen um Text\\
+\end{tabbing}
+\subsection{\texttt{graphicx}}
+\verb=\usepackage[<optionen>]{graphicx}=\\
+\\
+Mit dem \textsl{Graphics}-Paket ist es möglich externe Grafiken einzubinden. Um einen schnellen Kompiliervorgang zu erreichen können einige Optionen gesetzt werden.
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\textbf{Option}			\>\textbf{Erklärung}\\
+\verb=draft=			\>Grafiken werden nicht geladen\\
+\verb=final=			\>Gegenteil von \verb=draft=\\
+\verb=hiderotate=		\>Verberge gedrehten Text\\
+\verb=hidescale=			\>Verberbe skalierten Text\\
+\verb=demo=			\>Ersetzt Grafik durch Rechteck\\
+\end{tabbing}
+\paragraph{Rotieren}\leavevmode \\
+\verb=\rotatebox[<key val list>]{<angle>}{<text>}=\\
+Ohne gesetzte Optionen rotiert der Text immer bezüglich des Standard Referenz Punkt der Box.
+\paragraph{Skalieren}\leavevmode \\
+\verb=\scalebox{<h-scale>}[<v-scale>]{<text>}=\\
+Skaliert den angegebenen Text. Falls kein vertikaler Wert explizit gesetzt wurde, ist dieser gleich dem horizontalen Wert.\\
+\\
+\verb=\reflectbox{<text>}=\\
+Äquivalent zu \verb=\scalebox{-1}[1]{<text>}=
+\paragraph{Grafik einbinden}\leavevmode \\
+\verb=\includegraphics*[<key val list>]{<file>}=\\
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\textbf{Option}			\>\textbf{Erklärung}\\
+\verb=height=			\>Grafik wird in der Höhe skaliert\\
+\verb=width=			\>Grafik wird in der Breite skaliert\\
+\verb=angle=			\>Grafik wird gedreht\\
+\end{tabbing}
+Weitere Optionen können der offiziellen Dokumentation des \textsl{Graphicx}-Pakets\footnote{http://vesta.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/required/graphics/grfguide.pdf} entnommen werden.
+\subsection{\texttt{inputenc}}
+\verb=\usepackage[<encoding name>]{inputenc}=\\
+Das Paket \textsf{Inputenc} erlaubt dem Nutzer die Zeichenkodierung des Dokumentes festzulegen.
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\textbf{Unterstützte Kodierung}		\>\textbf{Erklärung}\\
+\verb=ascii=					\>ASCII Code range 32-127\\
+\verb=latin=X					\>ISO Latin Encoding (X für 1 bis 10\\
+\verb=utf8=					\>Unicode UTF-8 Encoding\\
+\end{tabbing}
+\subsection{\texttt{listings}}
+\verb=\usepackage[<optionen>]{listings}=\\
+Mit dem Paket \textsl{Listings} ist es möglich nicht formatierten Text dem Dokument hinzuzufügen. Der Unterschied zur \textsl{Verbatim}-Umgebung ist, dass das Hauptaugenmerk auf dem Hinzufügen von Source Code liegt.
+\begin{lstlisting}[caption={Listings Beispiele}, escapechar=']
+%Listings Umgebung
+'\verb=\begin{lstlisting}[caption={Beschreibung}]'
+SourceCode
+'\verb=\end{lstlisting}='
+
+%SourceCode aus einer Datei importieren
+\lstinputlisting{source_filename.py}
+
+%SourceCode aus einer Datei importieren mit Angabe der Sprache
+\lstinputlisting[language=Phyton]{source_filename.py}
+
+%Nur angegebene Zeilen des SourceCodes darstellen
+\lstinputlisting[language=Phyton, firstline= 10, lastline=15]{source_filename.py}
+
+%Listings werden mit Zeilennummern und einfachen Rahmen dargestellt
+\lstset{numbers=left, frame=single}
+\end{lstlisting}
+
+Mit dem Befehl \verb=\lstset{}= können globale Parameter gesetzt werden. Für eine komplette Liste aller möglichen Optionen kann auf die offizielle Dokumentation\footnote{http://ftp.gwdg.de/pub/ctan/macros/latex/contrib/listings/listings.pdf} zurückgegriffen werden.
+\subsection{\texttt{longtable}}
+\verb=\usepackage{longtable}=\\
+Mit Hilfe des \textsl{longtable}-Paketes ist es möglich Tabellen zu erstellen, welche durch \LaTeX{} auch umgebrochen werden können. So ist es möglich mehrseite Tabellen zu erstellen. Es benutzt den selben \verb=counter= wie die \verb=table=-Umgebung und wird ebenfalls im Tabellenverzeichnis aufgelistet. Damit \LaTeX{} die Tabellen korrekt darstellt sollte der Compiler mehrfach drüberlaufen. Die Definition der Tabelle erfolgt analog zur \verb=tabular=-Umgebung.
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\textbf{Befehl}				\>\textbf{Erklärung}\\
+\verb=\endhead=			\>Head, auf jeder Seite\\
+\verb=\endfirsthead=			\>Head, nur für die 1. Seite\\
+\verb=\endfoot=				\>Footer, jeder Seite\\
+\verb=\endlastfoot=			\>Footer, der letzten Seite\\
+\verb=\caption{text}=			\>Beschreibung\\
+\verb=\caption*{text}=		\>Beschreibung, non lot\\
+\verb=\setlongtables=			\>Obsolete\\
+\verb=\begin{longtable}[pos]=	\>c, l, r erlaubt\\
+\verb=\pagebreak=			\>alle Seitenumbruch Befehle erlaubt
+\end{tabbing}
+\subsection{\texttt{multicol}}
+\verb=\usepackage{multicols}=\\
+\LaTeX{} erlaubt bereits das Wechseln des Layouts mithilfe von \verb=\twocolumn= und \verb=\onecolumn=. Dies ist allerdings auch immer mit dem Beginn einer neuen Seite verbunden. Anders ist dies mit dem Paket \textsl{multicols} möglich. Die Spalten dürfen allerdings keine Gleitobjekte enthalten.
+\begin{lstlisting}[caption={Mulicol-Umgebung}]
+%Umgebung
+\begin{multicols}{spaltenanzahl}[Titel]
+	text
+\end{multicols}
+
+%Umgebung ohne Balancing
+\begin{multicols*}
+
+%Spaltenabstand
+\columnsep{breite}
+
+%Strichbreite
+\columnseprule{breite}
+
+%Manueller Spaltenumbruch
+\columnbreak
+\end{lstlisting}

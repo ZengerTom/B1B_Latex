@@ -1,0 +1,52 @@
+\chapter{Boxen}
+\section{Konzept}
+Damit \LaTeX{} ein sauberes Schriftbild erzeugen kann bedient es sich dem ``Box''-Konzept. Jedes einzelne Zeichen wird in eine sogenannte Box gepackt. Die zu Wörtern zusammengefasste Zeichen werden ebenfalls in eine Box gepackt (jedes Wort eine Box). Die Wörterboxen werden in eine Zeilenbox gepack, diese in Absatzboxen bis schlussendlich alles in eine Seitenbox gepackt wird. Abstände innerhalb dieser Boxen haben keine feste Größe. Die variablen Abstände werden von \LaTeX{} als \textit{rubber} bezeichnet. Ein ``Gummi'' der gestaucht und gedehnt werden kann.
+\section{Arten}
+Es gibt verschiedene Arten von Boxen.
+\begin{tabbing}
+xxxxxxxxxxx\=\kill
+LR-Box		\>Text wird von links nach rechts gesetzt\\
+			\>kein Zeilenumbruch (Zeilenbox)\\
+Parbox 		\>Absatzbox mit Zeilenumbruch\\
+Rule-Box		\>dient zum Linien \& Balken zeichnen\\
+\end{tabbing}
+\newpage
+\section{Rahmen}
+Mit folgenden Befehlen können einzelne Wörter eingerahmt werden. Das Paket \verb=fancybox= wird für die mit * gekennzeichneten Rahmen benötigt. Diese Rahmenbefehle erzeugen automatisch eine LR-Box.
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\fbox{text}=				\>einfacher Rahmen\\
+\verb=\framebox[breite]{text}=		\>Rahmen mit variabler Breite\\
+\verb=\shadowbox{text}= 			\>Schattenbox*\\
+\verb=\doublebox{text}=			\>Doppelrahmen*\\
+\verb=\ovalbox{text}=				\>ovaler Rahmen*\\
+\verb=\Ovalbox{text}=				\>fetter, ovaler Rahmen*\\
+\end{tabbing}
+\begin{lstlisting}[caption={Rahmenbeispiele}, escapechar=$]
+\fbox{Iron Maiden}	\framebox[5cm]{Iron Maiden}	\framebox[1cm]{Iron Maiden}
+\shadowbox{Iron Maiden}	\doublebox{Iron Maiden}	\ovalbox{Iron Maiden}
+\Ovalbox{Iron Maiden}
+
+%Beispiele
+$\fbox{Iron Maiden}$	$\framebox[5cm]{Iron Maiden}$	$\framebox[1cm]{Iron Maiden}$
+$\shadowbox{Iron Maiden}$	$\doublebox{Iron Maiden}$	$\ovalbox{Iron Maiden}$
+$\Ovalbox{Iron Maiden}$
+\end{lstlisting}
+\section{Parbox}
+Da die oben aufgeführten LR-Boxen keinen Zeilenumbruch unterstützten, wird zu langer Text einfach über die Zeilenlänge hinaus geführt. Da dieses Verhalten meist nicht gewünscht ist, kann in solchen Fällen auf Par-Boxen zurückgegriffen werden. Par-Boxen beinhalten einen Absatz, indem auch Zeilenumbrüche möglich sind. ParBoxes können mit folgendem Befehl gesetzt werden: \verb=\parbox[position]{breite}{text}=. Mit dem optionalen Parameter \textit{position} kann die Position relativ zur Grundlinie beeinflusst werden (t, b, c ist möglich).
+\begin{lstlisting}[caption={Parbox Befehle}, escapechar=$] 
+\parbox{3cm}{Woe to you, Oh Earth and Sea}
+\parbox[t]{2cm}{Because he knows the time is short}
+\parbox[c]{2cm}{Let him who hath understanding reckon the number of the beast}
+\parbox[b]{2cm}{Its number is Six hundred and sixty six}
+\end{lstlisting}
+Folgendes Beispiel veranschaulicht die obigen Befehle. Zur besseren Kenntlichmachung der Par-Boxen wurden diese mit dem \verb=fbox=-Befehl umrahmt. Natürlich sind auch andere Rahmen möglich.
+\begin{figure}[H]
+\fbox{\parbox{2cm}{Woe to you, Oh Earth and Sea}} For the Devil sends the beast with wrath \fbox{\parbox[t]{2cm}{Because he knows the time is short}}\\
+\fbox{\parbox[c]{2cm}{Let him who hath understanding reckon the number of the beast}} For it is a human number \fbox{\parbox[b]{2cm}{Its number is Six hundred and sixty six}}
+\caption{Parbox Beispiele}
+\end{figure}
+\section{Linien \& Balken}
+Der Befehl \verb=\rule[position]{breite}{höhe}= dient zum Zeichnen von ``schwarzen Rechtecken''. Größenangaben als Positionsparameter sind relativ zur Grundlinie zu sehen. Mit einer 0 cm breiten Box lassen sich z.B. Frame-Boxen vergrößern. 
+\section{Verschieben von Boxen}
+Der Befehl \verb=\raisebox{position}= lassen sich Boxen beliebig zur Grundlinie verschieben. Negative Werte setzen die Box unterhalb der Grundlinie.

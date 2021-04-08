@@ -1,0 +1,37 @@
+\chapter{Gleitobjekte}
+Gleitobjekte verhalten sich gemäß ihren Platzierungsregeln. Vereinfacht kann gesagt werden, dass sie so früh wie möglich platziert werden (aber nicht vor der Definition). Sollte das Seitenlayout eine Platzierung an dieser Stelle nicht zulassen, werden die Objekte verschoben. Dabei wird die Reihenfolge eingehalten. Mit dem Befehl \verb=\clearpage= werden alle Gleitobjekte platziert und danach ein Seitenumbruch erzeugt.
+\section{Abbildungen}
+Die \verb=figure=-Umgebung ist für Abbildungen gedacht. Bei zweispaltigem Textsatz kann mit dem Befehl \verb=\begin{figure*}= erreicht werden, dass die Abbildung den Platz von zwei Spalten einnimmt. Mit \verb=\caption{Beschreibung}= kann eine Bildunterschrift erstellt werden, welche im Abbildungsverzeichnis berücksichtigt wird. Außerdem ist es möglich ein Label zu setzen, um das Bild im Text zu referenzieren. \LaTeX{} kann die Abbildung an verschiedenen Stellen positionieren. Hierzu können mehrere Parameter in eckigen Klammern übergeben werden.
+\begin{tabbing}
+xxxxx\=\kill
+\texttt{h}		\>here (hier, falls Platz)\\
+\texttt{t}		\>top (Seitenanfang)\\
+\texttt{b}		\>bottom (Seitenende)\\
+\texttt{p}		\>page (eigene Seite)\\
+\texttt{!}		\>bang (Beschränkungen ignorieren\\
+\texttt{H}		\>Genau hier\\
+\end{tabbing}
+\section{Tabellen}
+Alle genannten Eigenschaften der Abbildungen gelten auch für die Tabellen. Tabellen werden anstatt ins Abbildungsverzeichnis ins Tabellenverzeichnis übernommen und werden mit dem Befehl \verb=\begin{table}= erzeugt.\\
+\begin{minipage}{1\textwidth}
+\begin{lstlisting}[caption={Beispiele Abbildung \& Tabelle}]
+\begin{figure}[H]
+	\includegraphics{...}
+	\caption{Beschreibung}
+\end{figure}
+
+\begin{table}[bt]
+	\begin{tabular}
+		%Tabelle
+	\end{tabular}
+	\caption{Beschreibung}
+\end{table}
+\end{lstlisting}
+\end{minipage}
+\section{\texttt{minipage}}
+Mit Hilfe einer \texttt{minipage} können Inhalte mit fester Breite in ein \LaTeX{} Dokument eingebettet werden. Eine \texttt{minipage} darf keine Gleitobjekte und Randnotizen enthalten. Die \textit{Äußere Position} legt die Ausrichtung zur Grundlinie fest (c, t, b). Die \textit{Höhe} ignoriert die tatsächliche Höhe und streckt das Element auf die angegebene Größe. Die \textit{Innere Position} richtet den Inhalt innerhalb der \texttt{minipage} aus (c, t, b). Die \textit{Breite} muss immer angegeben werden.
+\begin{lstlisting}[caption={minipage-Umgebung}]
+\begin{minipage}[AUSPOSITION][HOHE][INNPOSITION]{BREITE}
+	Beispieltext
+\end{minipage}
+\end{lstlisting}

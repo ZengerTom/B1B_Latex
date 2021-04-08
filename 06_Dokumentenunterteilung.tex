@@ -1,0 +1,37 @@
+\chapter{Dokumentenunterteilung}
+
+\section{Kapitel}
+Erstellte Überschriften werden von \LaTeX{} automatisch durchnummeriert und hervorgehoben. Folgende Befehle können zur logischen Aufteilung des Dokuments genutzt werden:
+\begin{itemize}
+\item \verb=\chapter= (\textsc{nur \textsl{book} und \textsl{report}})
+\item \verb=\section=
+\item \verb=\subsection=
+\item \verb=\subsubsection=
+\item \verb=\paragraph=
+\item \verb=\subparagraph=
+\end{itemize}
+
+\section{Inhaltsverzeichnis}\label{TOC}
+Überschriften werden automatisch ins Inhaltsverzeichnis übernommen. Um dieses aktuell zu halten ist ein zweifaches Kompilieren des Dokuments von Nöten. Mit \texttt{tocdepth} wird die Tiefe des Verzeichnisses festgelegt (1 entspricht der obersten Ebene). Desweiteren kann die Darstellung der Überschriften im Inhaltsverzeichnis beeinflusst werden. Der Inhalt des Inhaltsverzeichnis wird in eine externe Datei ausgelagert (\textit{.toc}).
+\begin{table}[H]
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\tableofcontents=				\>Erstellt Inhaltsverzeichnis\\
+\\
+\verb=\setcounter{tocdepth}{Wert}=		\>Setzt Tiefe\\
+\\
+\verb=\befehl{Überschrift}=				\>Überschrift ins Inhaltsverzeichnis\\
+\\
+\verb=\befehl*{Überschrift}=			\>Überschrift nicht ins Inhaltsverzeichnis\\
+\\
+\verb=\befehl[Alter]{Überschrift}=		\>Alter ins Inhaltsverzeichnis\\
+\end{tabbing}
+\caption{Kapitel \& Inhaltsverzeichnis (Befehle)}
+\end{table}
+
+\section{Unterteilung in mehrere Dateien}
+Es ist möglich ein Dokument aus mehreren einzelnen Dateien zusammenzusetzen. Die eingefügte Datei wird als normaler \LaTeX{}-Quellcode interpretiert. Die eingefügten Dateien dürfen keine Dokumentendeklaration enthalten. Im Gegensatz zum \verb=\include=-Befehl, darf der \verb=\input=-Befehl verschachtelt werden. Die Dateiendung sollte angegeben werden, da \LaTeX[{} sonst erst nach einer Datei ohne Endung sucht, bevor \textit{.tex} angehängt wird.
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+Verwendung				\>\verb=\input(pfad/datei.tex)=\\
+\end{tabbing}

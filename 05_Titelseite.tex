@@ -1,0 +1,23 @@
+\chapter{Titelseite}
+\LaTeX{} stellt Methoden zur Verfügung eine Titelseite für das Dokument zu erstellen. Im Top Matter (direkt nach \verb=\begin{document}=) können Informationen hierzu bereitgestellt werden.
+\begin{table}[H]
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\title{titel}=					\>Setzt Titel\\
+\\
+\verb=\date{datum}=					\>Setzt Datum\\
+								\>Leeres Argument, falls kein Datum gewünscht\\
+\\
+\verb=\today=						\>Aktuelles Datum\\
+\\
+\verb=\author{}=						\>Setzt Autor\\
+\\
+\verb=\and=						\>mehrere Autoren\\
+\\
+\verb=\thanks{}=						\>Danksagung, Fußnote\\
+\\
+\verb=\maketitle=					\>Erstellt Titelseite\\
+\end{tabbing}
+\caption{Titelseite (Befehle)}
+\end{table}
+Mit Hilfe der Umgebung \texttt{titlepage} kann man eigene Titelseiten erstellen. Dabei muss allerdings das komplette Layout selbst angepasst werden. Das Paket \textsl{titling} ist zum Anpassen des \texttt{maketitle}-Befehls geeignet.

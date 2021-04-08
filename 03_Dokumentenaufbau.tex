@@ -1,0 +1,68 @@
+\chapter{Dokumentenaufbau}
+\section{minimaler Dokumentenaufbau}
+\paragraph{\textcolor{blue}{\textbackslash documentclass}}\leavevmode \\
+Legt fest in welcher Art und Weise ein Dokument erzeugt wird. Hier festgelegte Eigenschaften gelten für das gesamte Dokument.
+\paragraph{\textcolor{blue}{\textbackslash begin}\{document\}}\leavevmode \\
+Mit diesem Befehl wird die Dokumentenumgebung eingeleitet. Es folgen der eigentliche Text des Dokumentes und die Formatierungsbefehle.
+\paragraph{\textcolor{blue}{\textbackslash end}\{document\}}\leavevmode \\
+Beendet die Dokumentenumgebung. \LaTeX wird alle nachfolgenden Eingaben ignorieren.
+\begin{lstlisting}[caption={Minimaler Dokumentenaufbau}]
+\documentclass{article}
+\begin{document}
+	Hallo minimaler Aufbau!
+\end{document}
+\end{lstlisting}
+\section{Deklaration Dokumentenklasse}
+\begin{verbatim}
+\documentclass[<optionen>][<klasse>]
+\end{verbatim}
+Es muss genau eine Dokumentenklasse angegeben werden. Optionen dürfen mehrere angegeben werden. Diese sind durch Kommata zu trennen.
+\section{Standard-Dokumentenklassen}
+In der Standardinstallation sind bereits einige Grunddokumententypen enthalten. Dokumententypen des Koma-Script-Pakets passen die Dokumentenklassen an die Bedürfnisse der deutschen/europäischen Nutzern an.
+\paragraph{Klassen}
+\begin{tabbing}
+xxxxxxxxxxxxxxxxx\=\kill
+\texttt{article}		\>Dokumentklasse für kurze, technische Artikel\\
+\texttt{book}		\>Dokumentklasse für das Schreiben von Büchern\\
+\texttt{report}		\>Dokumentklasse für längere technische Artikel\\
+				\>Zwischenstufe zwischen \textsl{article} und \textsl{book}\\
+\texttt{letter}		\>Dokumentklasse zum Schreiben von Briefen\\
+\texttt{scrartcl}		\>KOMA-Script Äquivalent zu \textsl{article}\\
+\texttt{scrbook}		\>KOMA-Script Äquivalent zu \textsl{book}\\
+\texttt{srcreprt}		\>KOMA-Script Äquivalent zu \textsl{report}\\
+\texttt{scrlttr2}		\>KOMA-Script Äquivalent zu \textsl{letter}\\
+\texttt{beamer}		\>Dokumentklasse für Präsentationen\\
+\texttt{moderncv}	\>Lebensläufe\\
+\end{tabbing}
+\section{Gliederungsebenen}
+\setlength{\tabcolsep}{4mm}
+\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{article}				&\textbf{book}				&\textbf{report}				&\textbf{letter}				&\textbf{Level}\\
+\hline
+&\textbackslash chapter		&\textbackslash chapter		&&0\\
+\textbackslash section			&\textbackslash section		&\textbackslash section		&\textbackslash signature	&1	\\
+\textbackslash subsection		&\textbackslash subsection		&\textbackslash subsection		&\textbackslash address	&2	\\
+\textbackslash subsubsection	&\textbackslash subsubsection	&\textbackslash subsubsection	&\textbackslash opening	&3	\\
+\textbackslash paragraph		&\textbackslash paragraph		&\textbackslash paragraph		&\textbackslash closing	&4	\\
+\textbackslash subparagraph		&\textbackslash subparagraph	&\textbackslash subparagraph	&					&5\\				
+\hline
+\end{tabular}
+\caption{Gliederungsebenen der Klassen}
+\label{Tab.1}
+\end{table}
+\section{Optionen der Standardklassen}
+Einige Beispiele für Optionen. Genaueres ist in den Klassendokumentationen nachzulesen.
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\textbf{Papiergröße}\> letterpaper, a4paper\\
+\textbf{Titelblatt}\>titlepage, notitlepage\\
+\textbf{Schriftgröße}\>10pt, 11pt, 12pt\\
+\textbf{Papierausrichtung}\>portrait, landscape\\
+\textbf{Drucklayout}\>oneside, twoside\\
+\textbf{Spaltenlayout}\>onecolumn, twocolumn\\
+\textbf{Math. Gleichungen}\>fleqn, leqno
+\end{tabbing}

@@ -1,0 +1,67 @@
+\chapter{Schrift}
+\LaTeX{} unterstützt die Verwendung von unterschiedlicher Schriftarten. Die Voreinstellungen sind 10 Punkte Schriftgröße (1 Punkt entspricht ca. 0,35mm) und Roman Schrift (mit Serifen).
+\section{Schriftfamilie}
+In \LaTeX{} stehen drei verschiedene Schriftfamilien zur Verfügung.
+\begin{table}[H]
+\centering
+\begin{tabular}{| m{5cm} | m{5cm} |}
+\hline
+\multicolumn{1}{|c|}{Proportionalschrift} 	&\multicolumn{1}{|c|}{Nichtproportionalschrift}\\
+\hline
+\begin{itemize}
+\item Serif
+\item Sans Serif
+\end{itemize}
+& \begin{itemize}
+\item Type Writer\end{itemize}\\
+\hline
+\end{tabular}
+\end{table}
+Diese können mit folgenden Befehlen deklariert werden. Welche Schrift dabei gewählt wird hängt von den Standardeinstellungen (Installation, Dokumentenklasse, Präambel) ab.
+\begin{center}
+\begin{tabular}{lll}
+\verb=\textrm{text}=&\textrm{Schrift mit Serifen}&\verb=\rmfamily=\\
+\verb=\textsf{text}=&\textsf{Schrift ohne Serifen}&\verb=\sffamily=\\
+\verb=\texttt{text}=&\texttt{Schreibmaschinenschrift}&\verb=\ttfamily=\\
+\end{tabular}
+\end{center}
+\section{Schriftgröße}
+In \LaTeX spezifizieren folgende Befehle die Schriftgröße. Dies erfolgt relativ zur Grundschriftgröße. Eine Änderung der Schriftgröße kann auch mit Hilfe einer Umgebung erfolgen.
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\tiny=			\>\tiny{Schriftgröße}\\
+\verb=\scriptsize=		\>\scriptsize{Schriftgröße}\\
+\verb=\footnotesize=		\>\footnotesize{Schriftgröße}\\
+\verb=\small=			\>\small{Schriftgröße}\\
+\verb=\normalsize=		\>\normalsize{Schriftgröße}\\
+\verb=\large=			\>\large{Schriftgröße}\\[3pt]
+\verb=\Large=			\>\Large{Schriftgröße}\\[3pt]
+\verb=\LARGE=			\>\LARGE{Schriftgröße}\\[3pt]
+\verb=\huge=			\>\huge{Schriftgröße}\\[3pt]
+\verb=\Huge=			\>\Huge{Schriftgröße}\\[3pt]
+\end{tabbing}
+\section{Schriftstil \& Hervorhebung}
+Außer der Schriftfamilie hat ein Font die Attribute Schriftstärke (\textit{series}) und Schriftform (\textit{shapes}). Die Befehle zur Änderung der Schriftstärke beeinflussen die Stärke der Linien und die Laufweite (\textit{weight \& width}). Bei Änderung der Schriftform wird die Ausrichtung der Buchstaben geändert.\\
+\\
+\begin{tabular}{ll}
+\multicolumn{2}{l}{Series}\\
+\verb=\textbf{text}=&\textbf{Fette Schrift}\\
+\verb=\textmd{text}=&\textmd{Normale Schrift}\\
+\\
+\multicolumn{2}{l}{Shapes}\\
+\verb=\textup{text}=&\textup{Aufrechte Schrift (upright)}\\
+\verb=\textsl{text}=&\textsl{Schräge Schrift (slanted}\\
+\verb=\textit{text}=&\textit{kursive Schrift (italic)}\\
+\verb=\textsc{text}=&\textsc{Schrift in Kapitälchen (smallcaps)}\\
+\verb=\textnormal{text}=&\textnormal{Grundschrift des Dokuments}\\
+\\
+\end{tabular}
+\\
+Man kann \LaTeX{} auch die Standardhervorhebung überlassen. \LaTeX{} ermittelt dann selbstständig welche Hervorhebungsform verwendet wird. Hierzu wird der \verb=\emph=-Befehl verwendet.\\
+\begin{lstlisting}[caption={Emph-Hervorhebung}, escapechar=@, breaklines=true]
+\textit{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+diam \emph{nonumy} eirmod invidunt ut labore et dolore magna aliquyam.}
+
+@\colorbox{lstback}{\textit{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam \emph{nonumy} eirmod}}@
+@\colorbox{lstback}{\textit{invidunt ut labore et dolore magna aliquyam.}}@
+\end{lstlisting}

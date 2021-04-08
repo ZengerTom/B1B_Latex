@@ -1,0 +1,84 @@
+\chapter{Umbruch}
+
+
+\section{Blocksatz}
+Der Standard-Satz in \LaTeX{} ist der Blocksatz. Hierbei wird der Rand ausgeglichen, Umbrüche werden gesetzt und eine automatische Aufteilung der Wörter wird vorgenommen. Falls nötig erfolgt auch die Trennung eines Wortes.
+\section{Trennungshilfen}
+\LaTeX{} übernimmt normalerweise automatisch die Trennung von Wörtern. Bei unbekannten Wörtern oder Fremdwörtern kann das allerdings zu fehlerhafter Trennung führen. Durch das Setzen von Trennhilfen kann man \LaTeX{} mitteilen, an welcher Stelle ein Wort getrennt werden soll oder eine Trennung explizit untersagen.
+\begin{table}[H]
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\hyphenation{trenn-ung}=			\>Wort wird an angegebener Stelle getrennt\\
+								\>Deklaration in der Präambel\\
+\\
+\verb=\-=							\>Trennung erfolgt nur an dieser Stelle (einmalig)\\
+\\
+\verb=''-=							\>Trennung darf auch an anderen Stellen erfolgen\\
+								\>(Paket \textsl{babel}\\
+\\
+\verb=\mbox{wort}=					\>Wort wird nicht getrennt\\
+								\>Es erfolgt keine Anpassung der Wortabstände\\
+\\
+\verb=~=							\>Es erfolgt keine Trennung (hartes Blank)\\
+\end{tabbing}
+\caption{Trennungsbefehle}
+\end{table}
+
+
+\section{Zeilenumbruch \& Absatz}
+\LaTeX{} organisiert den Text in Absätze welche vertikal auf den Seiten platziert werden. Folgende Befehle dienen nicht dazu das Design zu verbessern. Hierzu gibt es Möglichkeiten die Abstände anzupassen.
+\begin{table}[H]
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\\[vAbstand]=					\>Zeilenumbruch, zwangsweise\\
+								\>Kein Absatzende)\\
+\\
+\verb=\\*[vAbstand]=					\>Verhindert einen Zeilenumbruch\\
+
+\\
+\verb=\newline=						\>Erzeugt einen Zeilenumbruch\\
+								\>Kein Absatzende\\
+\\
+\verb=\linebreak[Priorität04]=			\>möglicher Zeilenumbruch\\
+								\>Zeile vor Umbruch bis zum Rand gestreckt.\\
+\\
+\verb=\nolinebreak[Priorität04]=			\>möglichst keinen Zeilenumbruch\\
+\\
+\verb=Leerzeile=						\>Neuer Absatz\\
+\\
+\verb=\par=						\>Neuer Absatz\\
+\end{tabbing}
+\caption{Umbruch (Befehle)}
+\end{table}
+
+
+\section{Seitenumbruch}
+Wie schon erwähnt kümmert sich \LaTeX{} selbstständig um etwaige Umbrüche von Zeilen. Selbiges trifft ebenfalls auf Seitenumbrüche zu. Auch hier kann man dies mit den entsprechenden Befehlen manipulieren.
+
+\paragraph{Automatische Steuerung}\leavevmode
+\begin{table}[H]
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\flushbottom=					\>Vertikaler Ausgleich an, alle Seiten gleich lang\\
+\\
+\verb=\raggedbottom=				\>Vertikaler Ausgleich aus\\
+\end{tabbing}
+\caption{Automatischer Seitenumbruch}
+\end{table}
+\newpage
+\paragraph{Manuelle Steuerung}\leavevmode
+\begin{table}[H]
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\newpage=					\>Seitenumbruch, zwangsweise\\
+								\>Spaltenumbruch, twocolumn-Dokumenten\\
+\\
+\verb=\clearpage=					\>Seitenumbruch, zwangsweise\\
+								\>Floating Umgebungen werden eingefügt\\
+\verb=\pagebreak[Priorität04]=			\>möglicher Seitenumbruch\\
+								\>Seite vor Umbruch bis zum Rand gestreckt\\
+\\
+\verb=\nopagebreak[Priorität04]=			\>möglichst keinen Seitenumbruch\\
+\end{tabbing}
+\caption{Manueller Seitenumbruch}
+\end{table}

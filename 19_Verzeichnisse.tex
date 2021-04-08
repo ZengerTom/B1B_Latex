@@ -1,0 +1,19 @@
+\chapter{Verzeichnisse}
+\LaTeX ist in der Lage selbstständig Verzeichnisse zu erstellen. Hierzu dienen Auszeichnungen wie z.B. \verb=\section{Überschrift}= oder auch gesetzte \texttt{Captions}. Erstellte Verzeichnisse werden in externe Dateien ausgelagert. Damit die Verzeichnisse korrekt sind sollte der \LaTeX Kompiler am besten drei mal über das Dokument laufen. Auf das Erstellen eines Inhaltsverzeichnisses wird in Kapitel \ref{TOC} genauer eingegangen.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Befehl					&Art des Verzeichnisses	&Datei\\
+\hline
+\verb=\tableofcontents=         	&Inhaltsverzeichnis		&.toc\\
+\hline
+\verb=\listoftables=			&Tabellenverzeichnis		&.lot\\
+\hline
+\verb=\listoffigures=			&Abbildungsverzeichnis	&.lof\\
+\hline
+\end{tabular}
+\caption{Verzeichnisse}
+\end{table}
+\subsection{Anhang}
+Eine besondere Art des Verzeichnisses ist der Anhang. Dieser wird mit dem \verb=\appendix= erstellt. Mit dem \verb=\section=-Befehl lassen sich automatisch nummerierte Punkte erzeugen (nicht zu verwechseln mit dem Befehl für Überschriften). Die Art der Nummerierung hängt von der verwendeten Dokumentenklasse ab.

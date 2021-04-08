@@ -1,0 +1,52 @@
+\chapter{Tabellen}
+\section{Tabulator - \texttt{tabbing}}
+Innerhalb der \verb@tabbing@-Umgebung ist es möglich Tabulatoren zu setzen. Tabulatoren werden mit \verb@\=@ gesetzt und können mit \verb@\>}@ angesprungen werden. Zeilen werden durch einen doppelten Backslash getrennt. Eine mit \verb@\kill@ beendete Zeile wird nicht ausgegeben, dennoch können aber in ihr gesetzte Tabulatoren angesprungen werden. Im Gegensatz zur \verb@tabular@-Umgebung erlaubt \verb@tabbing@ einen Seitenumbruch.
+\begin{lstlisting}[caption={tabbing-Beispiel}]
+\begin{tabbing}
+xxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxx\=\kill
+item1		\>color1	\>size1\\
+item2		\>color2 	\>size2\\
+item3		\>color3	\>size3\\
+item4		\>color4	\>size4\\
+\end{tabbing}
+\end{lstlisting}
+\section{Tabellen - \texttt{tabular}}
+Richtige Tabellen können mit der \verb=tabular=-Umgebung erzeugt werden. Tabellen können Parameter übergeben werden, die das Aussehen beeinflussen. Fogende Parameter können übergeben werden:
+\begin{tabbing}
+xxxxxxxxxxxxxx\=\kill
+\verb=l= 			\>Spalte mit linksbündigem Text\\
+\verb=c= 			\>Spalte mit zentriertem Text\\
+\verb=r= 			\>Spalte mit rechtsbündigem Text\\
+\verb=p{breite}= 	\>Spalte mit fixer Breite\\
+\verb=|=			\>senkrechter Strich\\
+\end{tabbing}
+\newpage
+Innerhalb der Tabelle erfolgt ein Spaltenwechsel mit \verb=&=. Eine neue Zeile wird mit \verb=\\= oder \verb=\tabularnewline= erreicht. \verb=hline= zeichnet eine horizontale Linie. Um eine mehrspaltige Überschrift zu setzen dient der Befehl \verb=\multicolumn{AnzahlSpalten}{Ausrichtung}{Text}=. Im Gegensatz zur \verb=tabbing=-Umgebung setzt die \=tabular=-Umgebung den Seitenumbruch nicht automatisch.
+\begin{lstlisting}[caption={tabular-Beispiel}]
+\begin{tabular}[h]{||c|l|p{8cm}|r||}
+\hline
+\multicolumn{4}{|c|}{Beispieltabelle}\\
+\hline
+Nr.	&Bezeichnung	&Prio	&Datum\\
+ 1	&Art1		&10	&2010\\
+ 2	&Art2		&8	&2012\\
+ 3	&Art3		&3	&2016\\
+\hline
+\end{tabular}
+\end{lstlisting}
+\begin{table}[H]
+\centering
+\begin{tabular}[h]{||c|l|p{8cm}|r||}
+\hline
+\multicolumn{4}{|c|}{Beispieltabelle}\\
+\hline
+Nr.	&Bezeichnung	&Prio	&Datum\\
+ 1	&Art1		&10	&2010\\
+ 2	&Art2		&8	&2012\\
+ 3	&Art3		&3	&2016\\
+\hline
+\end{tabular}
+\caption{tabular-Beispiel}
+\end{table}
+\textbf{Anmerkung}\\
+Falls innerhalb einer Tabellenumgebung eine Liste verwendet werden soll, muss diese in einer Zelle einer Spalte mit fester Breite sein oder innerhalb einer \verb=minipage=. Ansonsten kommt es zu einem Compilerfehler.

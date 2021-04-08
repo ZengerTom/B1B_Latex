@@ -1,0 +1,37 @@
+\chapter{Verweise und Bemerkungen}
+\section{Fußnoten}
+\LaTeX{} stellt einen Befehl bereit, der automatisch Fußnoten erzeugt, nummeriert und den Text der Fußnote am Ende der Seite darstellt. Optional kann ein anderes Symbol zur Nummerierung vergeben werden. Mit \verb=\footnotemark= kann eine Fußnote ohne Text gesetzt werden (z.B. um auf eine bestehende Footmark per Label zu verweisen). Per \verb=\footnotetext= kann eine Fußnote gesetzt werden, welche nicht im Text referenziert wird.
+\begin{lstlisting}[caption={Fußnoten (Befehle)}]
+\footnote[nummer]{text}
+
+\footnotemark[]
+
+\footnotetext[]{}
+\end{lstlisting}
+\section{Randbemerkung}
+\LaTeX{} unterstützt das setzten von Marginalien (Randbemerkungen). Hierbei wird der angegebene Text auf Höhe des Befehls an den Rand gesetzt.
+\begin{lstlisting}[caption={Randbemerkung (Befehle)}]
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+diam nonumy eirmod\marginpar{Anmerkung} tempor invidunt ut
+labore et dolore magna aliquyam erat, sed diam voluptua.
+\end{lstlisting}
+\section{Marken}
+In \LaTeX{} kann mit Hilfe des Befehls \verb=\label{markenname}= eine Marke gesetzt werden. Zur Benennung sollten nur ASCII Zeichen verwendet werden, um Fehler beim kompilieren zu vermeiden. Markennamen müssen innerhalb eines Dokuments eindeutig sein.
+\newpage
+\section{Querverweise}
+Sind Marken gesetzt worden können diese aufgerufen werden. Für die Bezugnahme stehen verschieden Befehle zur Verfügung. Querverweise werden in einer externen Datei gespeichert (\textit{.aux}). Mit Hilfe von Paketen kann weitere Funktionalität nachgeladen werden.
+\begin{table}[H]
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\kill
+\verb=\ref{markenname}=				\>Kapitelnummer\\
+\\
+\verb=\pageref{markenname}=			\>Seitennummer\\
+\\
+\verb=\href{ziel}{text}=				\>Link ins Internet\\
+\\
+\verb=\hypertarget{name}{text}=			\>legt Ziel fest\\
+\\
+\verb=\hyperlink{ziel}{text}=				\>springt Ziel an\\
+\end{tabbing}
+\caption{Verweise (Befehle)}
+\end{table}

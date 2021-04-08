@@ -1,0 +1,82 @@
+\chapter{Steuerzeichen \& Sonderzeichen}
+Um reservierte Steuerzeichen oder Sonderzeichen in \LaTeX--Dokumenten darstellen zu können gibt es spezielle Befehle. \LaTeX stellt hält eine sehr große Anzahl an Symbolen bereit. Eine Auflistung von über 14.000 Zeichen findet man in der Comprehensive \LaTeX Symbol List \footnote{ftp://ftp.mpi-sb.mpg.de/pub/tex/mirror/ftp.dante.de/pub/tex/info/symbols/comprehensive/symbols-a4.pdf}.
+\section{Griechische Buchstaben}
+Die griechischen Buchstaben werden normalerweise kursiv dargestellt, da der \LaTeX- Interpreter davon ausgeht, dass es sich um mathematische Symbole handelt (deswegen müssen die Befehle auch mit \$ geklammert werden). Es gibt jedoch mehrere Möglichkeiten dies zu umgehen:
+\begin{itemize}
+\item Das Paket \textsl{Upgreek} ermöglicht das gerade Darstellen der Buchstaben. Die Befehlsnamen erhalten das Präfix \textsl{up}.
+\item Das Paket \textsl{Textcomp} ermöglicht das Darstellen der Buchstaben im Fließtext. Die Befehlsnamen erhalten das Präfix \textsl{text}. Außerdem können mit dem Paket griechische Großbuchstaben realisiert werden.
+\item Für Einheiten sollte immer das Paket \textsl{Siunitx} verwendet werden.
+\item UTF-8 Kodierung ist im Fließtext möglich.
+\item Mit dem Paket \textsl{Textgreek} ist ein Wechseln in den Mathemodus nicht nötig.
+\end{itemize}
+\setlength{\tabcolsep}{1cm}
+\begin{table}[H]
+\begin{tabular}{l l l c}
+\textbf{Bezeichnung}		&\textbf{Befehl}		&\textbf{Zeichen}\\
+\verb=\textAlpha=		&\verb=\textalpha=	&\textalpha\\
+\verb=\textBeta=		&\verb=\textbeta=	&\textbeta\\
+\verb=\textGamma=		&\verb=\textgamma=	&\textgamma\\
+\verb=\textDelta=		&\verb=\textdelta=	&\textdelta\\
+\verb=\textEpsilon=		&\verb=\textepsilon=	&\textepsilon\\
+\verb=\textZeta=		&\verb=\textzeta=	&\textzeta\\
+\verb=\textEta=			&\verb=\texteta=	&\texteta\\
+\verb=\textTheta=		&\verb=\texttheta=	&\texttheta\\
+\verb=\textIota=			&\verb=\textiota=	&\textiota\\
+\verb=\textKappa=		&\verb=\textkappa=	&\textkappa\\
+\end{tabular}
+\caption{Auswahl an griech. Klein- \& Großbuchstaben}
+\end{table}
+\section{Interpunktions-, Satzzeichen und Klammern}
+\setlength{\tabcolsep}{1cm}
+\begin{table}[H]
+\begin{tabular}{l l c}
+\textbf{Befehl}				&\textbf{Befehl}		&\textbf{Zeichen}\\
+Bindestrich				&\verb=-=			&-\\
+Halbgeviertstrich			&\verb=--=			&--\\
+Geviertstrich				&\verb=---=		&---\\
+Auslassungspunkte			&\verb=\dots=		&\dots\\
+(horizontal)\\
+Auslassungpunkte			&\verb=\vdots=		&\vdots\\
+(vertikal)\\
+Anführungszeichen dt. links		&\verb=\glqq=		&\glqq\\
+einfach					&\verb=\glq=		&\glq\\
+Anführungszeichen dt. rechts	&\verb=\grqq=		&\grqq\\
+einfach					&\verb=\grq=		&\grq\\
+Anführungszeichen fr. links		&\verb=\flqq=		&\flqq\\
+einfach					&\verb=\flq=		&\flq\\
+Anführungszeichen fr. rechts	&\verb=\frqq=		&\frqq\\
+einfach					&\verb=\frq=		&\frq\\
+Geschweifte Klammern		&\verb=\{ oder \}=	&\{ oder \}
+\end{tabular}
+\caption{Auswahl Satzzeichen usw.}
+\end{table}
+\section{Sonderzeichnen \& Symbole}
+\setlength{\tabcolsep}{1cm}
+\begin{table}[H]
+\begin{tabular}{l l c}
+\textbf{Befehl}				&\textbf{Befehl}			&\textbf{Zeichen}\\
+Backslash					&\verb=\textbackslash=	&\textbackslash\\
+Dollarzeichen				&\verb=\$=				&\$\\
+Copyright					&\verb=\copyright=		&\copyright\\
+Trademark					&\verb=\texttrademark=	&\texttrademark\\
+Registiert					&\verb=\textregistered=	&\textregistered\\
+Paragraph					&\verb=\S=				&\S\\
+Kaufmanns-Und				&\verb=\&=			&\&\\
+Raute					&\verb=\#=			&\#\\
+
+Unterstrich				&\verb=\_=				&\_\\
+Prozentzeichen				&\verb=\%=			&\%\\
+Pfeile					&\verb=\leftarrow \gets=	&$\leftarrow$\\
+						&\verb=\rightarrow \to=	&$\to$\\
+						&\verb=\longleftarrow=	&$\longleftarrow$\\
+						&\verb=\longrightarrow=	&$\longrightarrow$\\
+Doppelpfeile				&\verb=\Leftarrow=		&$\Leftarrow$\\
+						&\verb=\Rightarrow=		&$\Rightarrow$\\
+						&\verb=\Longleftarrow=	&$\Longleftarrow$\\
+						&\verb=\Longrightarrow=	&$\Longrightarrow$\\
+
+
+\end{tabular}
+\caption{Symbole}
+\end{table}
+Anmerkung: Um die Befehle der Pfeile verwenden zu können müssen diese im Mathe-Modus gesetzt sein (\$-Klammerung) oder das \textsl{textcomp} -Paket genutzt werden (text-Präfix).
